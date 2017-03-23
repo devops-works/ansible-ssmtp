@@ -5,4 +5,4 @@ ssmtp_rewrite_from: "{{inventory_hostname}}@{{ssmtp_domain}}"
 ssmtp_rewrite_to: false
 ssmtp_smarthost: false
 ssmtp_from_line_override: "NO"
-ssmtp_use_start_tsl: "NO"
+ssmtp_use_start_tls: "NO"
