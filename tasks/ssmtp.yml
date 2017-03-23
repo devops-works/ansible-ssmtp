@@ -1,0 +1,20 @@
+- name: Installe ssmtp
+  apt:
+    pkg: ssmtp
+    state: present
+  notify: Send test email
+
+- name: Installe la configuration ssmtp
+  template:
+    src: ssmtp.conf.j2
+    dest: /etc/ssmtp/ssmtp.conf
+    mode: 0644
+  notify: Send test email
+
+- name: Installe les revaliases
+  template:
+    src: revaliases.j2
+    dest: /etc/ssmtp/revaliases
+    mode: 0644
+  notify: Send test email
+
