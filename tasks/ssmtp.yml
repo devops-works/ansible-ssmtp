@@ -1,6 +1,7 @@
 - name: Installe ssmtp
   apt:
     pkg: "{{ item }}"
+    update_cache: yes
     state: present
   with_items:
     - ssmtp

@@ -1,6 +1,6 @@
 - name: Checks that required vars are defined
   fail: msg="{{ item }} is not defined"
-  when: "not {{ item }}"
+  when: "not item"
   with_items:
     - ssmtp_relay_username
     - ssmtp_relay_password
