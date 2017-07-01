@@ -28,8 +28,10 @@ hostname={{ ssmtp_hostname | default(ansible_fqdn) }}
 # NO - Use the system generated From: address
 FromLineOverride={{ ssmtp_from_line_override }}
 
+{% if ssmtp_relay_username %}
 AuthUser={{ ssmtp_relay_username }}
 AuthPass={{ ssmtp_relay_password }}
+{% endif %}
 
-UseTLS=YES
+UseTLS={{ ssmtp_use_tls }}
 UseSTARTTLS={{ ssmtp_use_start_tls }}

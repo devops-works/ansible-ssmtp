@@ -6,3 +6,4 @@ ssmtp_rewrite_to: false
 ssmtp_smarthost: false
 ssmtp_from_line_override: "NO"
 ssmtp_use_start_tls: "NO"
+ssmtp_use_tls: "NO"
