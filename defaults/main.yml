@@ -1,5 +1,5 @@
-ssmtp_relay_username: false
-ssmtp_relay_password: false
+ssmtp_relay_username: False
+ssmtp_relay_password: False
 ssmtp_domain: False
 ssmtp_rewrite_from: "{{inventory_hostname}}@{{ssmtp_domain}}"
 ssmtp_rewrite_to: False
