@@ -1,7 +1,7 @@
 ssmtp_relay_username: False
 ssmtp_relay_password: False
-ssmtp_domain: False
-ssmtp_rewrite_from: "{{inventory_hostname}}@{{ssmtp_domain}}"
+ssmtp_domain: "{{ ansible_domain }}"
+ssmtp_rewrite_from: "{{inventory_hostname}}@{{ ssmtp_domain }}"
 ssmtp_rewrite_to: False
 ssmtp_smarthost: False
 ssmtp_from_line_override: "NO"
