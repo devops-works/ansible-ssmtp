@@ -7,3 +7,7 @@ ssmtp_smarthost: False
 ssmtp_from_line_override: "NO"
 ssmtp_use_start_tls: "NO"
 ssmtp_use_tls: "NO"
+ssmtp_send_test_mail: true
+ssmtp_packages:
+  - "ssmtp"
+  - "mailutils"
