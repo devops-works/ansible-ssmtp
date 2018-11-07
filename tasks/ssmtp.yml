@@ -1,11 +1,8 @@
 - name: Installe ssmtp
   apt:
-    pkg: "{{ item }}"
+    pkg: "{{ ssmtp_packages }}"
     state: latest
     update_cache: yes
-  with_items:
-    - ssmtp
-    - mailutils
   notify: Send test email
 
 - name: Installe la configuration ssmtp

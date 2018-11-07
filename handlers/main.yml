@@ -3,4 +3,5 @@
     LANG: "en_US.UTF-8"
   shell: >
     echo "SSMTP was installed successfuly on {{ ansible_hostname }} by Ansible." | mail -s 'SSMTP installed on {{ ansible_hostname }}' "{{ ssmtp_rewrite_to }}" -a 'Content-Type: text/plain; charset=UTF-8'
+  when: ssmtp_send_test_mail
 
