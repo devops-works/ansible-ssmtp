@@ -1,5 +1,14 @@
-- include_tasks: check_vars.yml
-  tags: ["ssmtp","mail","check"]
+---
+- include_tasks:
+    file: check_vars.yml
+    apply:
+      tags: ["ssmtp","mail","check"]
+  tags:
+    - always
 
-- include_tasks: ssmtp.yml
-  tags: ["ssmtp","mail"]
+- include_tasks:
+    file: ssmtp.yml
+    apply:
+      tags: ["ssmtp","mail"]
+  tags:
+    - always
